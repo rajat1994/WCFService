@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ClientModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ClientInfo">
+          <Key>
+            <PropertyRef Name="pkclientId" />
+          </Key>
+          <Property Name="pkclientId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar(max)" />
+          <Property Name="LastName" Type="varchar(max)" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="MaritalStatus" Type="varchar" MaxLength="20" />
+          <Property Name="MobileNumber" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="varchar" MaxLength="10" />
+          <Property Name="Nationality" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar(max)" />
+        </EntityType>
+        <EntityContainer Name="ClientModelStoreContainer">
+          <EntitySet Name="ClientInfo" EntityType="Self.ClientInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ClientModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ClientInfo">
+          <Key>
+            <PropertyRef Name="pkclientId" />
+          </Key>
+          <Property Name="pkclientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="ClientEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClientInfoes" EntityType="Self.ClientInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ClientModelStoreContainer" CdmEntityContainer="ClientEntities">
+          <EntitySetMapping Name="ClientInfoes">
+            <EntityTypeMapping TypeName="ClientModel.ClientInfo">
+              <MappingFragment StoreEntitySet="ClientInfo">
+                <ScalarProperty Name="pkclientId" ColumnName="pkclientId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

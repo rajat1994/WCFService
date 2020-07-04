@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3bc48735-6df0-4225-a1a1-5da88469c6b0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50865/ClientCrud.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ClientCrud.xsd" MetadataType="Schema" ID="13cd6ca7-3471-4373-9dd5-8cb6ef8f3857" SourceId="1" SourceUrl="http://localhost:50865/ClientCrud.svc?xsd=xsd0" />
+    <MetadataFile FileName="ClientCrud1.xsd" MetadataType="Schema" ID="00d3c54c-8287-47c5-9f20-ee315833c4f5" SourceId="1" SourceUrl="http://localhost:50865/ClientCrud.svc?xsd=xsd1" />
+    <MetadataFile FileName="ClientCrud2.xsd" MetadataType="Schema" ID="2cc3dd9f-05c0-40cf-bf57-0c2fb77db743" SourceId="1" SourceUrl="http://localhost:50865/ClientCrud.svc?xsd=xsd2" />
+    <MetadataFile FileName="ClientCrud.wsdl" MetadataType="Wsdl" ID="906ccaec-5532-4a8d-bf47-572b43170176" SourceId="1" SourceUrl="http://localhost:50865/ClientCrud.svc?wsdl" />
+    <MetadataFile FileName="ClientCrud.disco" MetadataType="Disco" ID="d0e2a927-eca9-496b-baab-5e079ef05cc0" SourceId="1" SourceUrl="http://localhost:50865/ClientCrud.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

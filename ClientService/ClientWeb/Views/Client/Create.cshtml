@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+<form id="friendform">
+    <table>
+        <tr>
+            <td>FirstName</td>
+            <td><input id="txtFirstName" name="FirstName" type="text" /></td>
+        </tr>
+        <tr>
+            <td>LastName</td>
+            <td><input id="txtLastName" name="LastName" type="text" /></td>
+        </tr>
+        <tr>
+            <td>MobileNumber</td>
+            <td><input id="txtMobileNumber" name="MobileNumber" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input id="txtEmail" name="Email" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Nationality</td>
+            <td><input id="txtNationality" name="Nationality" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input id="txtAddress" name="Address" type="text" /></td>
+        </tr>
+    </table>
+    <input id="btnsubmit" type="button" value="Submit" />
+</form>
+<script>
+    debugger;
+    $(document).ready(function () {
+        $("#btnsubmit").click(function (e) {
+            //Serialize the form datas.
+            var valdata = $("#friendform").serialize();
+            //to get alert popup
+            alert(valdata);
+            $.ajax({
+                url: "/Client/Add",
+                type: "POST",
+                dataType: 'json',
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                data: valdata
+            });
+        });
+    });
+</script>   
